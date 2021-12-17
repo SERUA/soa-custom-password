@@ -19,16 +19,16 @@ public class PasswordLengthValidator extends AbstractStringValidator {
     } else {
       matcher = patternUpper.matcher(password);
       if (!matcher.find()) {
-        addError(AbstractI18n.t_("la contraseÃ±a debe contener al menos una letra mayuscula", Locale));
+        addError(AbstractI18n.t_("la contraseña debe contener al menos una letra mayuscula", Locale));
       } else {
         matcher = patternLower.matcher(password);
         if (!matcher.find()) {
-          addError(AbstractI18n.t_("la contraseÃ±a debe contener al menos una letra minuscula", Locale));
+          addError(AbstractI18n.t_("la contraseña debe contener al menos una letra minuscula", Locale));
         } else {
           matcher = patternNumber.matcher(password);
           if (!matcher.find()) {
             System.out.println("la contrasedebe contener al menos un numero");
-            addError(AbstractI18n.t_("la contraseÃ±a debe contener al menos un numero", Locale));
+            addError(AbstractI18n.t_("la contraseña debe contener al menos un numero", Locale));
           } else {
             System.out.println("OK!");
           } 
